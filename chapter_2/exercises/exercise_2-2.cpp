@@ -18,20 +18,22 @@
 using std::cin;
 using std::cout;
 
+void drawTriangle(int);
+
 int main() {
   // Upper half
   for(int row = 4; row >= 1; row--) {
-    for(int space = 0; space < (row - 1); space++) {
-      cout << " ";
-    }
-    for(int hash = 0; hash < 8 - (row - 1) * 2; hash++) {
-      cout << "#";
-    }
-    cout << "\n";
+    drawTriangle(row);
   }
 
   // Lower half
   for(int row = 1; row <= 4; row++) {
+    drawTriangle(row);
+  }
+  return 0;
+}
+
+void drawTriangle(int row) {
     for(int space = 0; space < (row - 1); space++) {
       cout << " ";
     }
@@ -39,6 +41,4 @@ int main() {
       cout << "#";
     }
     cout << "\n";
-  }
-  return 0;
 }
