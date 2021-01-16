@@ -1,4 +1,4 @@
-// Think Like A Programmer Exercise 2-2
+// Think Like A Programmer Exercise 2-3
 //
 // Write a program using only single-character output statements that
 // output a hash mark, a space, or an end-of-line.
