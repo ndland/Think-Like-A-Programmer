@@ -18,38 +18,41 @@
 using std::cin;
 using std::cout;
 
+void drawShape(int);
+void printHashes(int);
+
 int main() {
   // Top
   for(int row = 1; row <= 4; row++) {
-    for(int space = 1; space <= row - 1; space++) {
-      cout << " ";
-    }
-    for(int hash = 1; hash <= row; hash++) {
-      cout << "#";
-    }
-    for(int space = 1; space <= (16 - (row * 4)); space++) {
-      cout << " ";
-    }
-    for(int hash = 1; hash <= row; hash++) {
-      cout << "#";
-    }
-    cout << "\n";
+    drawShape(row);
   }
 
   // Bottom
   for(int row = 4; row >= 1; row--) {
-    for(int space = 1; space <= row - 1; space++) {
-      cout << " ";
-    }
-    for(int hash = 1; hash <= row; hash++) {
-      cout << "#";
-    }
-    for(int space = 1; space <= (16 - (row * 4)); space++) {
-      cout << " ";
-    }
-    for(int hash = 1; hash <= row; hash++) {
-      cout << "#";
-    }
-    cout << "\n";
+    drawShape(row);
+  }
+}
+
+void drawShape(int row) {
+  // Left side
+  for(int space = 1; space <= row - 1; space++) {
+    cout << " ";
+  }
+
+  printHashes(row);
+
+  // Right side
+  for(int space = 1; space <= (16 - (row * 4)); space++) {
+    cout << " ";
+  }
+
+  printHashes(row);
+
+  cout << "\n";
+}
+
+void printHashes(int row) {
+  for(int hash = 1; hash <= row; hash++) {
+    cout << "#";
   }
 }
