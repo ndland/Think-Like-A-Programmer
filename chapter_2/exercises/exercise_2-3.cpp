@@ -18,22 +18,22 @@
 using std::cin;
 using std::cout;
 
-void drawShape(int);
+void calculateSpaces(int);
 void printHashes(int);
 
 int main() {
   // Top
   for(int row = 1; row <= 4; row++) {
-    drawShape(row);
+    calculateSpaces(row);
   }
 
   // Bottom
   for(int row = 4; row >= 1; row--) {
-    drawShape(row);
+    calculateSpaces(row);
   }
 }
 
-void drawShape(int row) {
+void calculateSpaces(int row) {
   // Left side
   for(int space = 1; space <= row - 1; space++) {
     cout << " ";
